@@ -1,0 +1,26 @@
+{% extends 'DemoPizzaBundle::layout.html.twig' %}
+
+{% block content %}  
+    <div id="order">
+        <a href="{{ path('order') }}"><img src="{{ asset('bundles/demopizza/images/order.png') }}" alt="Order Here" width="223" height="186" /></a>
+    </div>
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="{{ asset('bundles/demopizza/images/item-1.jpg') }}" alt="Item 1">                
+            </div>
+            <div class="item">
+                <img src="{{ asset('bundles/demopizza/images/item-2.jpg') }}" alt="Item 2">
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+        </a>
+        <a class="right carousel-control" href="#carousel" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+        </a>
+    </div>    
+{% endblock %}

@@ -1,0 +1,10 @@
+<div id="logo">
+    <a href="{{ path('home') }} "><img src="{{ asset('bundles/demopizza/images/logo.png') }}" alt="Logo" width="259" height="259" /></a>
+</div>
+<div class="menu">
+    <ul class="nav nav-justified">
+        <li {% if app.request.get('_route') == 'home' %} class="active"{% endif %}><a href="{{ path('home') }}">Home</a></li>
+        <li {% if app.request.get('_route') == 'order-step1' or  app.request.get('_route') == 'order-step2' or app.request.get('_route') == 'order-step3'%} class="active"{% endif %}><a href="{{ path('order') }}">Order</a></li>
+        <li {% if app.request.get('_route') == 'about' %} class="active"{% endif %}><a href="{{ path('about') }}">About</a></li>
+    </ul><!-- /.nav -->
+</div><!-- /.menu -->    

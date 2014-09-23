@@ -1,0 +1,7 @@
+parameters:
+#    demo_pizza.example.class: Demo\PizzaBundle\Example
+
+services:
+#    demo_pizza.example:
+#        class: %demo_pizza.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

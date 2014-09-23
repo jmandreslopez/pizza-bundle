@@ -1,0 +1,40 @@
+home:
+    path: /
+    defaults: 
+        _controller: DemoPizzaBundle:Main:index
+        
+about:
+    path: /about
+    defaults:
+        _controller: DemoPizzaBundle:Main:about
+        
+order:
+    path: /order
+    defaults:
+        _controller: DemoPizzaBundle:Order:index
+        
+order-step1:
+    path: /order/step1
+    defaults:
+        _controller: DemoPizzaBundle:Order:step1
+        
+order-step2:
+    path: /order/step2
+    defaults:
+        _controller: DemoPizzaBundle:Order:step2
+        
+order-step3:
+    path: /order/step3
+    defaults:
+        _controller: DemoPizzaBundle:Order:step3
+        
+register:
+    path: /register
+    defaults:
+        _controller: DemoPizzaBundle:Register:index
+        
+admin:
+    path: /admin
+    defaults:
+        _controller: DemoPizzaBundle:Admin:index
+

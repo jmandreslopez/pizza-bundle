@@ -1,0 +1,77 @@
+{% extends 'DemoPizzaBundle::layout.html.twig' %}
+
+{% block content %}
+    <div id="order-step2" class="banner">
+        <img src="{{ asset('bundles/demopizza/images/step2.png') }} " alt="Step2" width="176" height="181" />
+        <span class="text-center">{{ firstname }}</span>
+    </div>
+    {{ form_start(form) }}
+        <div class="row top-row order-options">
+            <div class="col-md-6">                
+                <div class="col-md-12 text-center">
+                    <span class="bold">Choose your ingredients</span>
+                </div>                
+                <div class="col-md-12 order-ingredients">
+                    <div class="col-md-4">
+                        <div class="col-md-12 text-center">
+                            <img src="{{ asset('bundles/demopizza/images/ingredient-1.png') }}" alt="Ingredient 1" width="92" height="92" />
+                        </div>                        
+                        <div class="col-md-12 text-center">
+                            <span>Pepperoni</span>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            {{ form_widget(form.ingredient1) }}
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 text-center">
+                            <img src="{{ asset('bundles/demopizza/images/ingredient-2.png') }}" alt="Ingredient 2" width="92" height="92" />
+                        </div>                        
+                        <div class="col-md-12 text-center">
+                            <span>Cheese</span>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            {{ form_widget(form.ingredient2) }}
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="col-md-12 text-center">
+                            <img src="{{ asset('bundles/demopizza/images/ingredient-3.png') }}" alt="Ingredient 2" width="92" height="92" />
+                        </div>                        
+                        <div class="col-md-12 text-center">
+                            <span>Mushrooms</span>
+                        </div>
+                        <div class="col-md-12 text-center">
+                            {{ form_widget(form.ingredient3) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 size">
+                <div class="col-md-12 text-center">
+                    <span class="bold">Choose your pizza size</span>
+                </div>
+                <div class="col-md-12 order-sizes">
+                    <div class="col-md-3 col-md-offset-2">
+                        <div class="col-md-12 text-center">
+                            <img src="{{ asset('bundles/demopizza/images/size.png') }}" alt="Size" width="92" height="92" />
+                        </div>
+                    </div>
+                    <div class="col-md-4 size-input">
+                        {{ form_widget(form.sizeId, {'attr': {'class': 'form-control text-center'}}) }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center submit">
+                {{ form_errors(form.ingredient1) }}
+                {{ form_errors(form.ingredient2) }}
+                {{ form_errors(form.ingredient3) }}
+                {{ form_errors(form.sizeId) }}
+                {{ form_errors(form) }}
+                {{ form_widget(form.submit, {'attr': {'class': 'btn btn-primary'}}) }}
+            </div>
+        </div>
+    {{ form_end(form) }}
+{% endblock %}

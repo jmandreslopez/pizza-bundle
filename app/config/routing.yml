@@ -1,0 +1,4 @@
+demo_pizza:
+    resource: "@DemoPizzaBundle/Resources/config/routing.yml"
+    prefix:   /
+

@@ -1,0 +1,18 @@
+{% extends 'DemoPizzaBundle::layout.html.twig' %}
+
+{% block content %}
+    <div class="page-header">
+        <span class="col-md-offset-2">About</span>
+    </div>
+    <div class="row">        
+        <div id="about" class="col-md-4 col-md-offset-2">
+            <p>This site was developed by Jos&eacute; Andr&eacute;s Manuel L&oacute;pez it's just a demo and practical capabilities of Symfony2.</p>
+            <p>The pizza place is not real and please do not hold your breath waiting for your pizza to be delivered.</p>            
+            <p>You can find the source code in <a href="http://github.com/jmandreslopez" target="_blank">GitHub</a>.</p>
+        </div>
+        <div class="col-md-4 col-md-offset-1">
+            <img src="{{ asset('bundles/demopizza/images/symfony.png') }}" alt="Symfony" width="203" height="244" />
+        </div>
+    </div>
+    
+{% endblock %}

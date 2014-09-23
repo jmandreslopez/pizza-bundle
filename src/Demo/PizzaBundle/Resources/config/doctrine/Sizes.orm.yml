@@ -1,0 +1,25 @@
+Demo\PizzaBundle\Entity\Sizes:
+    type: entity
+    table: sizes
+    repositoryClass: Demo\PizzaBundle\Entity\SizesRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        size:
+            type: string
+            length: 50
+        isActive:
+            type: boolean
+            column: is_active
+            default: 1
+        createdAt:
+            type: datetime
+            column: created_at
+            columnDefinition: TIMESTAMP
+            nullable: true
+    lifecycleCallbacks:
+        prePersist: [ timestamps ]

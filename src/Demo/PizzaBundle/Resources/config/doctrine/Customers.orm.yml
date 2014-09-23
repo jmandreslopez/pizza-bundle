@@ -1,0 +1,29 @@
+Demo\PizzaBundle\Entity\Customers:
+    type: entity
+    table: customers
+    repositoryClass: Demo\PizzaBundle\Entity\CustomersRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        firstname:
+            type: string
+            length: 255
+        lastname:
+            type: string
+            length: 255
+        phone:
+            type: string
+            length: 50
+        address:
+            type: text
+        createdAt:
+            type: datetime
+            column: created_at
+            columnDefinition: TIMESTAMP
+            nullable: true
+    lifecycleCallbacks:
+        prePersist: [ timestamps ]

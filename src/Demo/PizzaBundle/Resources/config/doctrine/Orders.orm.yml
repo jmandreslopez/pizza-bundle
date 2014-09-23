@@ -1,0 +1,51 @@
+Demo\PizzaBundle\Entity\Orders:
+    type: entity
+    table: orders
+    repositoryClass: Demo\PizzaBundle\Entity\OrdersRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        customerId:
+            type: integer
+            column: customer_id
+        ingredient1:
+            type: boolean
+            column: ingredient_1
+            default: 0
+        ingredient2:
+            type: boolean
+            column: ingredient_2
+            default: 0
+        ingredient3:
+            type: boolean
+            column: ingredient_3
+            default: 0
+        sizeId:
+            type: integer
+            column: size_id
+        delivered:
+            type: boolean
+            default: 0
+            nullable: true
+        createdAt:
+            type: datetime
+            column: created_at
+            columnDefinition: TIMESTAMP
+            nullable: true
+    manyToOne:
+        customer:
+            targetEntity: Customers
+            joinColumn:
+                name: customer_id
+                referencedColumnName: id
+        size:
+            targetEntity: Sizes
+            joinColumn:
+                name: size_id
+                referencedColumnName: id
+    lifecycleCallbacks:
+        prePersist: [ timestamps ]

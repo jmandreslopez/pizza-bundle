@@ -1,0 +1,172 @@
+body {
+    padding-top: 40px;
+}
+
+.container {
+    position: relative;
+}
+
+/* Logo */
+
+#logo {
+    position: absolute;
+    z-index: 9999;
+    top: -30px;
+    left: -90px;
+}
+
+/* Menu */
+
+.menu {
+    padding: 0px 75px;
+    background-color: #058FBD; 
+    -webkit-box-shadow: 0px 13px 32px -15px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 13px 32px -15px rgba(0,0,0,0.75);
+    box-shadow: 0px 13px 32px -15px rgba(0,0,0,0.75);
+}
+
+.nav-justified > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 22px;
+    color: #434137;
+    text-align: center;
+    background-color: #058FBD;
+}
+
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus,
+.nav >li >a:hover, .nav >li >a:focus {
+    background-color: #058FBD;
+    background-image: none;
+    color: #FFF;
+}
+
+@media (min-width: 768px) {
+    .nav-justified > li:first-child > a {
+        border-right: 2px dashed #FFF;
+    }
+
+    .nav-justified > li:last-child > a {
+        border-left: 2px dashed #FFF;
+    }
+}
+
+/* Content */
+
+@media (min-width: 768px) {
+    .content {
+        min-height: 500px;
+        border-left: 1px solid #716f69;
+        border-right: 1px solid #716f69;
+        border-bottom: 1px solid #716f69;
+    }
+}
+
+/* Carrousel */
+
+.carousel-control .glyphicon-chevron-right {
+    margin-right: -50px;
+}
+
+.carousel-control .glyphicon-chevron-left {
+    margin-left: -50px;
+}
+
+/* Home */
+
+#order {
+    position: absolute;
+    z-index: 999;
+    bottom: -75px;
+    left: 40%;
+}
+
+/* Order */
+
+.banner {
+    position: absolute;
+    z-index: 9999;
+    left: 495px;
+    top: 60px;
+}
+
+.banner span {
+    position: absolute;
+    bottom: 46px;
+    width: 100%;
+    color: #f0ebe0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.top-row {
+    padding-top: 200px;
+}
+
+.errors {
+    color: #FF0000;
+}
+
+.errors ul {
+    list-style: none;
+    padding:0;
+    margin:0;
+}
+
+.submit {
+    margin-top: 15px;
+}
+
+.size {
+    border-left: 1px dashed #434137;
+    min-height: 200px;
+}
+
+.order-options span,
+.thanks span{
+    color: #058FBD; 
+    font-weight: bold;
+}
+
+.thanks span {
+    font-size: 24px;
+}
+
+.order-ingredients,
+.order-sizes {
+    padding-top: 25px;
+}
+
+.size-input {
+    padding-top: 25px;
+}
+
+/* Register */
+
+label {
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+/* About */
+
+.page-header {
+    padding-top: 60px;
+    padding-bottom: 10px;
+    margin: 0 0 20px 7px;
+}
+
+.page-header span {
+    font-size: 24px;
+    font-weight: bold;    
+}
+
+/* Error */
+
+#error {
+    padding-top: 135px;
+}

@@ -1,0 +1,28 @@
+Demo\PizzaBundle\Entity\Customers:
+    properties:
+        firstname:
+            - NotBlank: ~
+        lastname:
+            - NotBlank: ~
+        phone:
+            - Regex:
+                pattern: '/^(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*$/'
+                match: true
+                message: 'Not a valid phone number'
+        address:
+            - NotBlank: ~
+            
+Demo\PizzaBundle\Entity\Orders:
+    properties:
+        customerId:
+            - NotBlank: ~
+            - Regex:
+                pattern: '/\d+/'
+                match: true
+                message: 'Not a customer Id'
+        sizeId:
+            - NotBlank: ~
+            - Regex:
+                pattern: '/\d+/'
+                match: true
+                message: 'Not a size Id'
